@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://Scenes/Login.gd" type="Script" id=1]
+[ext_resource path="res://Fonts/Minecraft.ttf" type="DynamicFontData" id=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 32
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=5]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=6]
+size = 24
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 32
+font_data = ExtResource( 2 )
+
+[node name="Login" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+
+[node name="Menu" type="VBoxContainer" parent="."]
+margin_left = 60.0
+margin_top = 40.0
+margin_right = 580.0
+margin_bottom = 320.0
+
+[node name="Main" type="Label" parent="Menu"]
+margin_right = 520.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0.568627, 0.00784314, 1 )
+text = "Islanders"
+align = 1
+valign = 1
+
+[node name="Login" type="HBoxContainer" parent="Menu"]
+margin_top = 68.0
+margin_right = 520.0
+margin_bottom = 141.0
+custom_constants/separation = 32
+alignment = 1
+
+[node name="Labels" type="VBoxContainer" parent="Menu/Login"]
+margin_left = 45.0
+margin_right = 203.0
+margin_bottom = 73.0
+custom_constants/separation = 9
+
+[node name="User" type="Label" parent="Menu/Login/Labels"]
+margin_right = 158.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 2 )
+text = "User:"
+
+[node name="Password" type="Label" parent="Menu/Login/Labels"]
+margin_top = 41.0
+margin_right = 158.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 3 )
+text = "Password:"
+
+[node name="Input" type="VBoxContainer" parent="Menu/Login"]
+margin_left = 235.0
+margin_right = 475.0
+margin_bottom = 73.0
+
+[node name="InputUser" type="LineEdit" parent="Menu/Login/Input"]
+margin_right = 240.0
+margin_bottom = 34.0
+rect_min_size = Vector2( 240, 32 )
+custom_fonts/font = SubResource( 4 )
+
+[node name="InputPassword" type="LineEdit" parent="Menu/Login/Input"]
+margin_top = 38.0
+margin_right = 240.0
+margin_bottom = 72.0
+rect_min_size = Vector2( 240, 32 )
+custom_fonts/font = SubResource( 5 )
+
+[node name="Result" type="Label" parent="."]
+margin_left = 105.0
+margin_top = 192.0
+margin_right = 552.0
+margin_bottom = 240.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0.12549, 0.631373, 0, 1 )
+text = "Please enter your username and password"
+align = 1
+autowrap = true
+
+[node name="ButtonLogin" type="Button" parent="."]
+margin_left = 242.521
+margin_top = 246.302
+margin_right = 442.521
+margin_bottom = 284.302
+custom_fonts/font = SubResource( 7 )
+text = "Login"
+
+[node name="ButtonRegister" type="Button" parent="."]
+margin_left = 242.521
+margin_top = 294.302
+margin_right = 442.521
+margin_bottom = 332.302
+custom_fonts/font = SubResource( 7 )
+text = "Register"
+[connection signal="pressed" from="ButtonLogin" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ButtonRegister" to="." method="_on_ButtonRegister_pressed"]
