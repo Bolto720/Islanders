@@ -67,5 +67,7 @@ zoom_out={
 [rendering]
 
 quality/2d/use_pixel_snap=true
+quality/filters/use_nearest_mipmap_filter=true
+environment/default_clear_color=Color( 0.20752, 0.369846, 0.664062, 1 )
 quality/depth/hdr=false
 environment/default_environment="res://default_env.tres"

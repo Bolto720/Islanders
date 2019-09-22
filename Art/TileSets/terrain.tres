@@ -23,13 +23,7 @@ points = PoolVector2Array( 0, 0, 24, 0, 24, 24, 0, 24 )
 0/autotile/z_index_map = [  ]
 0/occluder_offset = Vector2( 0, 0 )
 0/navigation_offset = Vector2( 0, 0 )
-0/shapes = [ {
-"autotile_coord": Vector2( 0, 0 ),
-"one_way": false,
-"one_way_margin": 1.0,
-"shape": null,
-"shape_transform": Transform2D( 1, 0, 0, 1, 0, 0 )
-} ]
+0/shapes = [  ]
 0/z_index = 2
 1/name = "water"
 1/texture = ExtResource( 1 )
