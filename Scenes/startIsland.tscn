@@ -5,7 +5,8 @@
 [ext_resource path="res://Art/TileSets/terrain.tres" type="TileSet" id=3]
 
 [sub_resource type="Gradient" id=1]
-colors = PoolColorArray( 0.501961, 0.501961, 0.501961, 1, 0.501961, 0.501961, 0.501961, 1 )
+offsets = PoolRealArray( 0, 0.951049, 1 )
+colors = PoolColorArray( 0.501961, 0.501961, 0.501961, 1, 0.501961, 0.501961, 0.501961, 1, 0.501961, 0.501961, 0.501961, 1 )
 
 [sub_resource type="GradientTexture" id=2]
 gradient = SubResource( 1 )
@@ -47,3 +48,4 @@ tile_data = PoolIntArray( 720910, 3, 7, 720911, 3, 6, 786446, 3, 8, 786447, 3, 0
 position = Vector2( 1200, 1200 )
 scale = Vector2( 1.17188, -2400 )
 texture = SubResource( 2 )
+energy = 0.01

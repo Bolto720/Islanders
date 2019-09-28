@@ -27,7 +27,7 @@ Network="*res://Scripts/Network.gd"
 [display]
 
 window/size/width=640
-window/size/height=360
+window/size/height=340
 window/stretch/mode="2d"
 window/stretch/aspect="expand"
 
@@ -64,9 +64,15 @@ zoom_out={
  ]
 }
 
+[network]
+
+limits/debugger_stdout/max_chars_per_second=1024
+
 [rendering]
 
 quality/2d/use_pixel_snap=true
+threads/thread_model=2
+quality/reflections/high_quality_ggx=false
 quality/filters/use_nearest_mipmap_filter=true
 environment/default_clear_color=Color( 0.20752, 0.369846, 0.664062, 1 )
 quality/depth/hdr=false
