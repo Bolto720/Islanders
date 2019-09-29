@@ -5,6 +5,7 @@ onready var manager = get_node("/root/Manager")
 onready var network = get_node("/root/Network")
 onready var camera = get_node("Camera2D")
 
+
 var input_timeout = 0.2
 var current_input_timeout = 0
 
@@ -50,12 +51,12 @@ func _input(event):
 	
 # Zoom Camera
 func _zoom_camera(dir):
-	if camera.zoom <= Vector2(1,1) && dir < 0:
-		camera.zoom = Vector2(1,1)
-		return
-	if camera.zoom >= Vector2(5,5) && dir > 0:
-		camera.zoom = Vector2(5,5)
-		return
+	#if camera.zoom <= Vector2(1,1) && dir < 0:
+	#	camera.zoom = Vector2(1,1)
+	#	return
+	#if camera.zoom >= Vector2(5,5) && dir > 0:
+	#	camera.zoom = Vector2(5,5)
+	#	return
 		
 	camera.zoom += Vector2(0.1, 0.1) * dir
 
@@ -63,13 +64,13 @@ func try_move(dx, dy):
 	var x = self.position.x + (dx * tile_size)
 	var y = self.position.y + (dy * tile_size)
 	
-	if !manager.can_enter_cell(x,y):
+	if !manager.can_enter_cell(x / tile_size, y / tile_size):
 		return
 
 	var command = {"Player": self.name, "Command": "move", "Pos_x": x, "Pos_y": y}
 	
 	network.client_command(command);
-	
+
 func server_command(command):
 	var res = {}
 	res = command

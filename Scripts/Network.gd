@@ -17,8 +17,8 @@ func _ready():
 	print("Start client TCP")
     # Connect
 	connection = StreamPeerTCP.new()
-	#connection.connect_to_host("127.0.0.1", 8082)
-	connection.connect_to_host("159.65.53.223", 8082)
+	connection.connect_to_host("127.0.0.1", 8082)
+	#connection.connect_to_host("159.65.53.223", 8082)
 	peerstream = PacketPeerStream.new()
 	peerstream.set_stream_peer(connection)
 
