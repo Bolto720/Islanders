@@ -49,7 +49,7 @@ func server_command(command):
 	
 		if res.Command == "login":
 			if res.Result == false:
-				get_tree().get_root().get_node("Login/Result").text = "Unable to login"
+				get_tree().get_root().get_node("Login/Menu/Result").text = "Unable to login"
 				return
 			
 			playerName = res.Player
@@ -59,9 +59,9 @@ func server_command(command):
 		
 		elif res.Command == "register":
 			if res.Result == false:
-				get_tree().get_root().get_node("Login/Result").text = "Unable to register"
+				get_tree().get_root().get_node("Login/Menu/Result").text = "Unable to register"
 			else:
-				get_tree().get_root().get_node("Login/Result").text = "Registration complete, you can now login"
+				get_tree().get_root().get_node("Login/Menu/Result").text = "Registration complete, you can now login"
 		elif res.Command == "broadcast" || res.Command == "enter":
 			if !networkPlayers.has(res.Player):
 				add_network_player(res)

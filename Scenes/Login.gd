@@ -1,7 +1,7 @@
 extends Control
 
 onready var network = get_node("/root/Network")
-onready var resultLabel = get_node("Result")
+onready var resultLabel = $Menu/Result
 
 func _ready():
 	pass

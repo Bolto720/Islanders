@@ -1,7 +1,6 @@
 extends Control
 
-onready var player = get_tree().get_root().get_node("Game/Player")
-
+onready var player = get_node("/root/Manager").player
 
 func _on_ButtonUp_pressed():
 	player.try_move(0,-1)
